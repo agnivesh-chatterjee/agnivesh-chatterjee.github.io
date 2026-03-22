@@ -1,34 +1,277 @@
-<div class="section">
-    <h2>Projects</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agnivesh Chatterjee | Data Science</title>
 
-    <div class="card">
-        <h3>Amazon Employee Review EDA</h3>
-        <p>Performed exploratory data analysis on employee reviews to identify patterns in sentiment, satisfaction, and workplace trends.</p>
+<style>
+:root {
+    --bg: #0a0a0a;
+    --primary: #ffffff;
+    --accent: #4f9cff;
+    --card: #111;
+    --hover: #1a1a1a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--primary);
+    display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    background: #050505;
+    padding: 30px 20px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar h2 {
+    color: var(--accent);
+    margin-bottom: 20px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: white;
+    margin: 10px 0;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: var(--accent);
+}
+
+.profile-pic {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+/* Main */
+.main {
+    margin-left: 260px;
+    padding: 40px;
+    width: 100%;
+}
+
+/* Sections */
+.section {
+    margin-bottom: 60px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: var(--accent);
+}
+
+/* Cards */
+.card {
+    background: var(--card);
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    background: var(--hover);
+    transform: translateY(-4px);
+}
+
+/* Skills */
+.skill {
+    margin-bottom: 15px;
+}
+
+.skill span {
+    color: var(--accent);
+}
+
+/* Loader */
+.loader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    transition: opacity 0.5s ease;
+}
+
+.loader.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.spinner {
+    border: 4px solid #333;
+    border-top: 4px solid var(--accent);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    100% { transform: rotate(360deg); }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Loader -->
+<div class="loader" id="loader">
+    <div class="spinner"></div>
+</div>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <div>
+        <img src="your-photo.jpg" class="profile-pic">
+        <h2>Agnivesh</h2>
+
+        <a href="#">Resume</a>
+        <a href="https://github.com/agnivesh-chatterjee">GitHub</a>
+        <a href="#">LinkedIn</a>
+        <a href="mailto:your-email@example.com">Contact</a>
     </div>
 
-    <div class="card">
-        <h3>Ames Housing Price Prediction</h3>
-        <p>Built regression models with feature engineering techniques to predict housing prices using the Ames dataset.</p>
+    <div>
+        <p style="font-size: 12px; opacity: 0.6;">© 2026</p>
+    </div>
+</div>
+
+<!-- Main Content -->
+<div class="main">
+
+    <!-- ABOUT -->
+    <div class="section">
+        <h1>About Me</h1>
+        <p>
+        I’m a Master’s student in Data Science at the Chennai Mathematical Institute, with a background in mathematics and formal training in statistics and computer science. I’m particularly interested in using data to solve real-world problems—through analytical modeling, machine learning, and exploratory data analysis. I value clarity, rigor, and building solutions that are both practical and interpretable.
+        </p>
     </div>
 
-    <div class="card">
-        <h3>Eigenfaces (Linear Algebra Project-Implementation of Eigen Faces)</h3>
-        <p>Implemented eigenfaces for facial recognition using dimensionality reduction techniques from linear algebra.</p>
+    <!-- PROJECTS -->
+    <div class="section">
+        <h2>Projects</h2>
+
+        <div class="card">
+            <h3>Amazon Employee Review EDA</h3>
+            <p>Performed exploratory data analysis on employee reviews to identify patterns in sentiment, satisfaction, and workplace trends.</p>
+            <p> Online Streamlit Dashboard: <a href="https://amazonemployeerevieweda-tbs8wsrdqjswmwgtzx7522-silver-carbide.streamlit.app/">here</a></p>
+        </div>
+
+        <div class="card">
+            <h3>Ames Housing Price Prediction</h3>
+            <p>Built regression models with feature engineering techniques to predict housing prices using the Ames dataset.</p>
+            <p> Github Repository: <a href="https://github.com/agnivesh-chatterjee/ames-housing-prices">here</a></p>
+        </div>
+
+        <div class="card">
+            <h3>Eigenfaces (Linear Algebra Project) (Ongoing)</h3>
+            <p>Implemented eigenfaces for facial recognition using dimensionality reduction techniques from linear algebra.</p>
+            <p> Github Repository: <a href="https://github.com/agnivesh-chatterjee/eigen_faces_linear_algebra_class">here</a></p>
+        </div>
+
+        <div class="card">
+            <h3>Quantum Techniques in Linear Regression (Ongoing) </h3>
+            <p>Compared classical regression methods with quantum-inspired techniques as part of a research-driven project.</p>
+        </div>
+
+        <div class="card">
+            <h3>SLM Training Project (Ongoing) </h3>
+            <p>Ongoing project focused on applied machine learning under industry mentorship, involving model development and evaluation.</p>
+        </div>
+
+        <div class="card">
+            <h3>Project Assignment System</h3>
+            <p>Collaborative project building a system for assigning tasks efficiently, developed during a data science internship evaluation.</p>
+            <p> Online Streamlit Dashboard: <a href="https://project-assignment-system-fpez5p826b5xwwjfxs2nbg-silver-frost.streamlit.app/">here</a> </p>
+        </div>
+
     </div>
 
-    <div class="card">
-        <h3>Quantum Techniques in Linear Regression</h3>
-        <p>Compared classical regression methods with quantum-inspired techniques as part of a research-driven project.</p>
-    </div>
+    <!-- SKILLS -->
+    <div class="section">
+        <h2>Skills</h2>
 
-    <div class="card">
-        <h3>SLM Training Project</h3>
-        <p>Ongoing project focused on applied machine learning under industry mentorship, involving model development and evaluation.</p>
-    </div>
+        <div class="skill">
+            <span>Python</span> — Used across EDA, regression, and machine learning projects
+        </div>
 
-    <div class="card">
-        <h3>Project Assignment System</h3>
-        <p>Collaborative project building a system for assigning tasks efficiently, developed during a data science internship evaluation.</p>
+        <div class="skill">
+            <span>Machine Learning</span> — Applied in  regression, and research-driven projects
+        </div>
+
+        <div class="skill">
+            <span>Statistics</span> — Regression modeling, hypothesis testing, and data interpretation
+        </div>
+
+        <div class="skill">
+            <span>Linear Algebra</span> — Applied in eigenfaces and dimensionality reduction techniques
+        </div>
+
+        <div class="skill">
+            <span>Data Analysis</span> — Real-world dataset exploration and insight generation
+        </div>
+
     </div>
 
 </div>
+
+<script>
+// Loader
+window.onload = () => {
+    setTimeout(() => {
+        document.getElementById("loader").classList.add("hidden");
+    }, 800);
+};
+
+// Scroll animation
+const sections = document.querySelectorAll(".section");
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+        }
+    });
+});
+
+sections.forEach(section => observer.observe(section));
+</script>
+
+</body>
+</html>
